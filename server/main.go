@@ -7,6 +7,7 @@ import (
 
 	pb "github.com/hermitkim1/grpc-study/protos"
 	"google.golang.org/grpc"
+	handler "github.com/hermitkim1/grpc-study/server/handler"
 )
 
 type server struct {
