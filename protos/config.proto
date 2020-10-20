@@ -15,18 +15,23 @@
 syntax = "proto3";
 
 option go_package = "github.com/hermitkim1/grpc-study/protos";
+option java_multiple_files = true;
 
 package config;
 
-// The greeting service definition.
-service Greeter {
-  // Sends a greeting
-  rpc SayHello (HelloRequest) returns (HelloReply) {}
+// 설정 조회 서비스
+service ConfigStore {
+  rpc Get (ConfigRequest) returns (ConfigResponse);
 }
 
-// The request message containing the user's name.
-message HelloRequest {
-  string name = 1;
+// 요청
+message ConfigRequest {
+  string profile = 1;
+}
+
+// 응답
+message ConfigResponse {
+  string json_config = 1;
 }
 
 // The response message containing the greetings
