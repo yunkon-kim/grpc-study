@@ -4,9 +4,9 @@ import (
 	"context"
 	"log"
 	"net"
-		
-	"google.golang.org/grpc"
+
 	pb "github.com/hermitkim1/grpc-study/protos"
+	"google.golang.org/grpc"
 )
 
 type server struct {
